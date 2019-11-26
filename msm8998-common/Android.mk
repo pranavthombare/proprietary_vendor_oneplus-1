@@ -62,9 +62,33 @@ LOCAL_PRIVILEGED_MODULE := true
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
+LOCAL_MODULE := QtiSystemService
+LOCAL_MODULE_OWNER := oneplus
+LOCAL_SRC_FILES := proprietary/product/app/QtiSystemService/QtiSystemService.apk
+LOCAL_CERTIFICATE := platform
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := APPS
+LOCAL_DEX_PREOPT := false
+LOCAL_MODULE_SUFFIX := .apk
+LOCAL_PRODUCT_MODULE := true
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
 LOCAL_MODULE := QtiTelephonyService
 LOCAL_MODULE_OWNER := oneplus
 LOCAL_SRC_FILES := proprietary/product/app/QtiTelephonyService/QtiTelephonyService.apk
+LOCAL_CERTIFICATE := platform
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := APPS
+LOCAL_DEX_PREOPT := false
+LOCAL_MODULE_SUFFIX := .apk
+LOCAL_PRODUCT_MODULE := true
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := imssettings
+LOCAL_MODULE_OWNER := oneplus
+LOCAL_SRC_FILES := proprietary/product/app/imssettings/imssettings.apk
 LOCAL_CERTIFICATE := platform
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_CLASS := APPS
@@ -117,4 +141,25 @@ LOCAL_CERTIFICATE := platform
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_CLASS := JAVA_LIBRARIES
 LOCAL_MODULE_SUFFIX := .jar
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := tcmclient
+LOCAL_MODULE_OWNER := oneplus
+LOCAL_SRC_FILES := proprietary/framework/tcmclient.jar
+LOCAL_CERTIFICATE := platform
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := JAVA_LIBRARIES
+LOCAL_MODULE_SUFFIX := .jar
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := qcrilhook
+LOCAL_MODULE_OWNER := oneplus
+LOCAL_SRC_FILES := proprietary/product/framework/qcrilhook.jar
+LOCAL_CERTIFICATE := platform
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := JAVA_LIBRARIES
+LOCAL_MODULE_SUFFIX := .jar
+LOCAL_PRODUCT_MODULE := true
 include $(BUILD_PREBUILT)
